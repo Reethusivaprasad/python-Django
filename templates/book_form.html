@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <style>
+    .demo{
+      background-color: pink;
+      font-size: medium;
+      
+    }
+    </style>
+    <title>Book Form</title>
+</head>
+<body id="demo"><center>
+    <h1><i>*Book Form*</i></h1><br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form><br>
+    <a href="{% url 'book_list' %}">Back to list</a></center>
+</body>
+</html>

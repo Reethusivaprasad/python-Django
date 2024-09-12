@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .demo{
+          background-color:pink;
+          font-size: medium;
+          
+        }
+        </style>
+    <title>{{ book.title }}</title>
+</head>
+<body id="demo">
+    <h1><center><I>*BOOK NAME*</I></center></h1>
+    <h1>{{ book.title }}</h1>
+    <p>AUTHOR : {{ book.author }}<p>
+    <p>PUBLISHED DATE : {{ book.published_date }}</p>
+    <p>International Standard BOOK NO: {{ book.isbn }}</p>
+    <a href="{% url 'book_update' book.pk %}"><button type="button" class="btn btn-success">Edit</button></a><br><br>
+    <a href="{% url 'book_delete' book.pk %}"><button type="button" class="btn btn-success">Delete</button></a><br><br>
+    <a href="{% url 'book_list' %}">Back to list</a><br>
+</body>
+</html>
